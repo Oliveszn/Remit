@@ -14,7 +14,7 @@ export function NavAuthButtons() {
     return navbar.style.backgroundColor === "rgb(255, 255, 255)";
   };
 
-  // ── Login hover ────────────────────────────────────────────────
+  // Login hover
   const onLoginEnter = () => {
     const el = loginRef.current;
     if (!el) return;
@@ -36,7 +36,7 @@ export function NavAuthButtons() {
     el.style.color = isScrolled() ? "#18181b" : "#ffffff";
   };
 
-  // ── Sign-up hover ──────────────────────────────────────────────
+  //  Sign-up hover
   const onSignupEnter = () => {
     const el = signupRef.current;
     if (!el) return;

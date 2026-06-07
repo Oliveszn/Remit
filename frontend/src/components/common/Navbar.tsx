@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Button } from "../ui/button";
-import { Tabs, TabsList, TabsTrigger } from "../ui/tabs";
 import { Logo } from "./Logo";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { ArrowDown01Icon } from "@hugeicons/core-free-icons";
@@ -9,6 +8,7 @@ import { DesktopDropdown } from "./Navbar/DesktopDropdown";
 import { MobileAccordion } from "./Navbar/MobileAccordion";
 import { useMobileMenuAnimation } from "@/hooks/useMobileMenuNavigation";
 import { NavAuthButtons } from "./Navbar/NavAuthButton";
+import { NavTabs } from "./Navbar/NavTabs";
 
 export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -50,42 +50,10 @@ export function Navbar() {
           aria-label="Main navigation"
           className="mx-auto max-w-7xl px-6 lg:px-8 py-4 flex items-center justify-between"
         >
-          {/* Col 1 — Logo */}
+          {/* Col 1 — Logo + Tabs */}
           <Logo />
           <div className="hidden md:flex items-center">
-            <Tabs defaultValue="personal">
-              <TabsList className="bg-zinc-300 p-2 rounded-xl h-auto">
-                <TabsTrigger
-                  value="personal"
-                  className="
-          rounded-lg px-4 py-3 text-sm font-medium
-          text-zinc-700
-          hover:bg-main hover:text-white hover:cursor-pointer
-          data-[state=active]:bg-main
-          data-[state=active]:text-white
-          data-[state=active]:shadow-none
-          transition-colors
-        "
-                >
-                  Personal
-                </TabsTrigger>
-
-                <TabsTrigger
-                  value="business"
-                  className="
-          rounded-lg px-4 py-3 text-sm font-medium
-          text-zinc-700
-          hover:bg-main hover:text-white hover:cursor-pointer
-          data-[state=active]:bg-main
-          data-[state=active]:text-white
-          data-[state=active]:shadow-none
-          transition-colors
-        "
-                >
-                  Business
-                </TabsTrigger>
-              </TabsList>
-            </Tabs>
+            <NavTabs />
           </div>
 
           {/* Col 2 — Links (desktop only) */}
@@ -221,40 +189,7 @@ export function Navbar() {
               className="flex flex-col flex-1 px-6 pt-8 pb-10 overflow-y-auto"
             >
               {/* Tabs */}
-              <div className="w-full">
-                <Tabs defaultValue="personal" className="w-full">
-                  <TabsList className="w-full bg-zinc-300 px-2 py-6 rounded-xl h-auto">
-                    <TabsTrigger
-                      value="personal"
-                      className="
-                        w-full rounded-lg px-4 py-4 text-base font-medium
-                        text-zinc-700 hover:cursor-pointer
-                        data-[state=active]:bg-main
-                        data-[state=active]:text-white
-                        data-[state=active]:shadow-none
-                        data-[state=active]:shadow-sm
-                        transition-colors
-                      "
-                    >
-                      Personal
-                    </TabsTrigger>
-
-                    <TabsTrigger
-                      value="business"
-                      className="
-                        w-full rounded-lg px-4 py-4 text-base font-medium
-                        text-zinc-700 hover:cursor-pointer
-                        data-[state=active]:bg-main
-                        data-[state=active]:text-white
-                        data-[state=active]:shadow-none
-                        transition-colors
-                      "
-                    >
-                      Business
-                    </TabsTrigger>
-                  </TabsList>
-                </Tabs>
-              </div>
+              <NavTabs fullWidth onNavigate={closeMenu} />
 
               {/* Nav links */}
               <ul className="space-y-1" role="list">
