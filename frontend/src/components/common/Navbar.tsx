@@ -42,7 +42,7 @@ export function Navbar() {
         data-navbar
         className="
           sticky top-0 z-40
-         bg-main backdrop-blur-md
+         bg-main-foreground backdrop-blur-md
         "
         role="banner"
       >

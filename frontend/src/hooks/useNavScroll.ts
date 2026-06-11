@@ -28,7 +28,7 @@ export function useNavScroll() {
           //Back to top → restore purple bg, white text
           scrolled = false;
           gsap.to(navbar, {
-            backgroundColor: "var(--color-main)",
+            backgroundColor: "var(--color-main-foreground)",
             duration: 0.35,
             ease: "power2.out",
           });
@@ -38,7 +38,7 @@ export function useNavScroll() {
             ease: "power2.out",
           });
           gsap.to(Array.from(darkItems), {
-            color: "var(--color-main)",
+            color: "var(--color-main-foreground)",
             backgroundColor: "#ffffff",
             duration: 0.3,
             ease: "power2.out",
@@ -58,7 +58,7 @@ export function useNavScroll() {
           });
           gsap.to(Array.from(darkItems), {
             color: "#ffffff",
-            backgroundColor: "var(--color-main)",
+            backgroundColor: "var(--color-main-foreground)",
             duration: 0.3,
             ease: "power2.out",
           });
