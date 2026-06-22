@@ -1,31 +1,49 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
+type NavMode = "dark-hero" | "light-page";
+
 /**
- * Hook to watch the hero section and changes the navbr backgorund and text color
- * once the user has scrolled past a certain threshold
+ * dark-hero (default — business page):
+ *   Nav starts purple (bg-main, white text). Transitions to white bg +
+ *   dark text once user scrolls past 20% of the hero.
+ *
+ * light-page (personal page):
+ *   Nav is immediately white with dark text + bg-main buttons.
+ *   No scroll transition — just sets the state once on mount.
  */
-export function useNavScroll() {
+export function useNavScroll(mode: NavMode = "dark-hero") {
   const heroRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
-    const hero = heroRef.current;
     const navbar = document.querySelector<HTMLElement>("[data-navbar]");
-    if (!hero || !navbar) return;
+    if (!navbar) return;
 
-    // Grab every element inside the nav that needs a colour flip
     const lightItems = navbar.querySelectorAll<HTMLElement>("[data-nav-light]");
     const darkItems = navbar.querySelectorAll<HTMLElement>("[data-nav-dark]");
+
+    //  Light page: set white nav immediately, no scroll listener
+    if (mode === "light-page") {
+      gsap.set(navbar, { backgroundColor: "#ffffff" });
+      gsap.set(Array.from(lightItems), { color: "#18181b" });
+      gsap.set(Array.from(darkItems), {
+        color: "#ffffff",
+        backgroundColor: "var(--color-main)",
+      });
+      return; // no observer needed
+    }
+
+    // Dark hero: intersection observer scroll transition
+    const hero = heroRef.current;
+    if (!hero) return;
 
     let scrolled = false;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // isIntersecting = hero 80%+ still visible → we're near the top
         const nearTop = entry.isIntersecting;
 
         if (nearTop && scrolled) {
-          //Back to top → restore purple bg, white text
           scrolled = false;
           gsap.to(navbar, {
             backgroundColor: "var(--color-main-foreground)",
@@ -44,7 +62,6 @@ export function useNavScroll() {
             ease: "power2.out",
           });
         } else if (!nearTop && !scrolled) {
-          //  Scrolled past 20% → white bg, dark text
           scrolled = true;
           gsap.to(navbar, {
             backgroundColor: "#ffffff",
@@ -52,7 +69,7 @@ export function useNavScroll() {
             ease: "power2.out",
           });
           gsap.to(Array.from(lightItems), {
-            color: "#18181b", // zinc-900
+            color: "#18181b",
             duration: 0.3,
             ease: "power2.out",
           });
@@ -64,15 +81,12 @@ export function useNavScroll() {
           });
         }
       },
-      {
-        // Fire when 80% of the hero is still visible (i.e. user is in top 20%)
-        threshold: 0.8,
-      },
+      { threshold: 0.8 },
     );
 
     observer.observe(hero);
     return () => observer.disconnect();
-  }, []);
+  }, [mode]);
 
   return heroRef;
 }

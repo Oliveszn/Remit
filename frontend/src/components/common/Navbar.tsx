@@ -244,7 +244,7 @@ export function Navbar() {
               {/* Auth buttons pinned to bottom */}
               <div className="menu-item space-y-3">
                 <a
-                  href="/signup"
+                  href="/auth/signup"
                   onClick={closeMenu}
                   className="
                     flex w-full items-center justify-center
@@ -255,7 +255,7 @@ export function Navbar() {
                   Create account
                 </a>
                 <a
-                  href="/login"
+                  href="/auth/login"
                   onClick={closeMenu}
                   className="
                     flex w-full items-center justify-center

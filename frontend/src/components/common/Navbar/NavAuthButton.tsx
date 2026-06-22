@@ -71,7 +71,7 @@ export function NavAuthButtons() {
       <a
         ref={loginRef}
         data-nav-light
-        href="/login"
+        href="/auth/login"
         style={{
           color: "#ffffff",
           backgroundColor: "transparent",
@@ -87,7 +87,7 @@ export function NavAuthButtons() {
       <a
         ref={signupRef}
         data-nav-dark
-        href="/signup"
+        href="/auth/signup"
         style={{
           backgroundColor: "#ffffff",
           color: "#18181b",
