@@ -66,13 +66,23 @@ export function CookieBanner() {
         </h2>
       </div>
 
-      <p className="text-base leading-relaxed text-[#4a5568] ">
+      <p className="text-base leading-relaxed text-[#4a5568] hidden lg:flex">
         No, we are not referring to the crunchy, chocolate kind. Cookies are
         tiny text files that help us make our website work better, improve your
         experience, and show you ads that matter. We only turn them on if you
         agree. See our{" "}
         <a
-          href="/privacy"
+          href="/#"
+          className="underline underline-offset-2 text-zinc-700 hover:text-black transition-colors"
+        >
+          Privacy Policy
+        </a>{" "}
+        for details.
+      </p>
+      <p className="flex lg:hidden text-base leading-relaxed text-[#4a5568]">
+        We only turn them on if you agree. See our{" "}
+        <a
+          href="/#"
           className="underline underline-offset-2 text-zinc-700 hover:text-black transition-colors"
         >
           Privacy Policy
