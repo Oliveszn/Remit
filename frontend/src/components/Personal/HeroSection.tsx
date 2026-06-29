@@ -26,13 +26,10 @@ export function HeroSection() {
         {/* Heading */}
         <h1
           id="personal-hero-heading"
-          className="text-5xl lg:text-7xl font-extrabold tracking-tight text-zinc-900 leading-[1.06]"
+          className="text-5xl lg:text-7xl font-bold tracking-tight text-zinc-900 leading-[1.06]"
         >
           For People Who Are Bad With Money.{" "}
-          <span
-            className="block font-medium italic text-4xl lg:text-5xl mt-2"
-            style={{ color: "var(--color-main)" }}
-          >
+          <span className="block font-medium italic text-4xl lg:text-5xl mt-2">
             (But Are Trying)
           </span>
         </h1>

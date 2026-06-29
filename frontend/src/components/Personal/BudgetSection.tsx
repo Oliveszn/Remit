@@ -4,22 +4,22 @@ import gsap from "gsap";
 const CARDS = [
   {
     text: "Automatically save for bills before they're due.",
-    img: "/budget1.webp",
+    img: "/bg1.webp",
     imgAlt: "Illustration of automatic bill savings",
   },
   {
     text: "Get reminded before payments, not after.",
-    img: "/budget2.webp",
+    img: "/bg2.webp",
     imgAlt: "Illustration of payment reminder notification",
   },
   {
     text: "Keep subscriptions running before the drama.",
-    img: "/budget3.webp",
+    img: "/bg3.webp",
     imgAlt: "Illustration of subscription management",
   },
   {
     text: "Finally understand where your money goes.",
-    img: "/budget4.webp",
+    img: "/bg4.webp",
     imgAlt: "Illustration of spending breakdown",
   },
 ];

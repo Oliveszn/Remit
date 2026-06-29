@@ -79,14 +79,14 @@ export function CookieBanner() {
         </a>{" "}
         for details.
       </p>
-      <p className="flex lg:hidden text-base leading-relaxed text-[#4a5568]">
+      <p className="block lg:hidden text-base leading-relaxed text-[#4a5568]">
         We only turn them on if you agree. See our{" "}
         <a
           href="/#"
           className="underline underline-offset-2 text-zinc-700 hover:text-black transition-colors"
         >
           Privacy Policy
-        </a>{" "}
+        </a>
         for details.
       </p>
 
