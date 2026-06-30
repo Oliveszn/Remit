@@ -7,6 +7,7 @@ import { BusinessPage } from "./pages/BusinessPage";
 import AuthLayout from "./layouts/AuthLayout";
 import LoginPage from "./pages/auth/LoginPage";
 import SignupPage from "./pages/auth/SignupPage";
+import CampusAmbassadorPage from "./pages/CampusAmbasaddorPage";
 
 function App() {
   const { pathname } = useLocation();
@@ -21,6 +22,8 @@ function App() {
           <Route path="login" element={<LoginPage />} />
           <Route path="signup" element={<SignupPage />} />
         </Route>
+
+        <Route path="/campus-ambassadors" element={<CampusAmbassadorPage />} />
 
         <Route path="/personal" element={<PersonalPage />} />
         <Route path="/business" element={<BusinessPage />} />
