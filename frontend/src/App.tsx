@@ -9,6 +9,9 @@ import LoginPage from "./pages/auth/LoginPage";
 import SignupPage from "./pages/auth/SignupPage";
 import CampusAmbassadorPage from "./pages/CampusAmbasaddorPage";
 import ReferralPage from "./pages/ReferralPage";
+import UtilityCardPage from "./pages/UtilityCard";
+import BudgetExpensePage from "./pages/BudgetExpensePage";
+import PayrollPage from "./pages/PayrollPage";
 
 function App() {
   const { pathname } = useLocation();
@@ -26,6 +29,9 @@ function App() {
 
         <Route path="/campus-ambassadors" element={<CampusAmbassadorPage />} />
         <Route path="/referrals" element={<ReferralPage />} />
+        <Route path="/utility-cards" element={<UtilityCardPage />} />
+        <Route path="/budget-expenses" element={<BudgetExpensePage />} />
+        <Route path="/payroll" element={<PayrollPage />} />
 
         <Route path="/personal" element={<PersonalPage />} />
         <Route path="/business" element={<BusinessPage />} />
