@@ -167,7 +167,7 @@ export function WhyUtilitySection() {
       className="py-20 lg:py-28 px-6 lg:px-16 bg-[#F6F6FC]"
       aria-labelledby="why-utility-heading"
     >
-      <div className="mx-auto max-w-7xl flex flex-col gap-14">
+      <div className="mx-auto max-w-6xl flex flex-col gap-14">
         <div className="flex flex-col items-center gap-3 text-center">
           <h2
             id="why-utility-heading"

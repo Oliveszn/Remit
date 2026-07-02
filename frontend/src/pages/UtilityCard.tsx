@@ -1,7 +1,6 @@
 import { HeroSection, WhyUtilitySection } from "@/components/Utility/Main";
 import { Helmet } from "react-helmet-async";
 
-// Page
 export default function UtilityCardPage() {
   return (
     <>
