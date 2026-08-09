@@ -12,6 +12,7 @@ import ReferralPage from "./pages/ReferralPage";
 import UtilityCardPage from "./pages/UtilityCard";
 import BudgetExpensePage from "./pages/BudgetExpensePage";
 import PayrollPage from "./pages/PayrollPage";
+import { ScrollToTop } from "./components/common/SCrolltoTop";
 
 function App() {
   const { pathname } = useLocation();
@@ -19,6 +20,7 @@ function App() {
 
   return (
     <div className="flex flex-col min-h-screen">
+      <ScrollToTop />
       <CookieBanner />
       {!isAuthRoute && <Navbar />}
       <Routes>
