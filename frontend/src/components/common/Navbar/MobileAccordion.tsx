@@ -3,17 +3,20 @@ import { ArrowDown01Icon } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 export function MobileAccordion({
   label,
   items,
   isOpen,
   onToggle,
+  onNavigate,
 }: {
   label: string;
   items: DropdownItem[];
   isOpen: boolean;
   onToggle: () => void;
+  onNavigate: () => void;
 }) {
   const bodyRef = useRef<HTMLDivElement>(null);
 
@@ -63,8 +66,9 @@ export function MobileAccordion({
         <ul className="pb-4 space-y-1" role="list">
           {items.map((item) => (
             <li key={item.title}>
-              <a
-                href="#"
+              <Link
+                to={item.link}
+                onClick={onNavigate}
                 className="flex items-start gap-3 px-1 py-2.5 rounded-xl hover:bg-zinc-50 transition-colors"
               >
                 <span
@@ -81,7 +85,7 @@ export function MobileAccordion({
                     {item.description}
                   </p>
                 </div>
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

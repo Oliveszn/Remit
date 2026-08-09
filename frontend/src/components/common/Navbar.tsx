@@ -201,6 +201,7 @@ export function Navbar() {
                       items={dropdownData[label]}
                       isOpen={openAccordion === label}
                       onToggle={() => toggleAccordion(label)}
+                      onNavigate={closeMenu}
                     />
                   ) : (
                     <li

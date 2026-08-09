@@ -1,6 +1,7 @@
 import type { DropdownItem } from "@/types/Navtypes/Dropdown";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { Link } from "react-router-dom";
 
 export function DesktopDropdown({
   label,
@@ -50,8 +51,8 @@ export function DesktopDropdown({
         <ul className="grid grid-cols-2 gap-2" role="list">
           {items.map((item) => (
             <li key={item.title}>
-              <a
-                href="#"
+              <Link
+                to={item.link}
                 className="
                   flex items-start gap-3
                   p-3 rounded-xl
@@ -74,7 +75,7 @@ export function DesktopDropdown({
                     {item.description}
                   </p>
                 </div>
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

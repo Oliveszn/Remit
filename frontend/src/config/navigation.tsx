@@ -4,48 +4,53 @@ export const dropdownData: Record<string, DropdownItem[]> = {
   Products: [
     {
       icon: "💸",
-      title: "Instant Transfers",
-      description:
-        "Send money across borders in seconds with real-time FX rates.",
+      title: "Payroll",
+      description: "Automated Payroll Without the Stress",
+      link: "/payroll",
     },
-    {
-      icon: "🏦",
-      title: "Virtual Accounts",
-      description: "Get local bank details in multiple currencies instantly.",
-    },
+    // {
+    //   icon: "🏦",
+    //   title: "Virtual Accounts",
+    //   description: "Get local bank details in multiple currencies instantly.",
+    //   link: "",
+    // },
     {
       icon: "💳",
-      title: "Remit Card",
-      description:
-        "Spend anywhere in the world with zero foreign transaction fees.",
+      title: "Utility Cards",
+      description: "Smart Corporate Cards for your Teams.",
+      link: "/utility-cards",
     },
     {
       icon: "📊",
-      title: "Business Payments",
-      description: "Automate bulk payouts and manage multi-currency balances.",
+      title: "Budget & Expense Management",
+      description: "Stay in Control of Every Expense.",
+      link: "/budget-expenses",
     },
   ],
   Resources: [
-    {
-      icon: "📖",
-      title: "Documentation",
-      description: "Integrate Remit's API into your product with clear guides.",
-    },
-    {
-      icon: "✍️",
-      title: "Blog",
-      description: "Insights on fintech, remittances, and building for Africa.",
-    },
+    // {
+    //   icon: "📖",
+    //   title: "Documentation",
+    //   description: "Integrate Remit's API into your product with clear guides.",
+    //   link: "",
+    // },
+    // {
+    //   icon: "✍️",
+    //   title: "Blog",
+    //   description: "Insights on fintech, remittances, and building for Africa.",
+    //   link: "",
+    // },
     {
       icon: "🎓",
       title: "Campus Ambassador",
-      description: "Join our ambassador program and earn on your campus.",
+      description: "Earn while you earn on as a Remit ambassador",
+      link: "/campus-ambassadors",
     },
     {
       icon: "🤝",
       title: "Referral Program",
-      description:
-        "Invite friends and earn rewards for every successful signup.",
+      description: "Refer friends and earn rewards",
+      link: "/referrals",
     },
   ],
 };
