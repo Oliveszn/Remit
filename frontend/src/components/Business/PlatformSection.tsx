@@ -153,7 +153,7 @@ function CorporateCard({
           {label}
         </span>
         <img
-          src="/public/mastercard.png"
+          src="/mastercard.png"
           alt="Mastercard"
           className="h-5 w-auto opacity-80"
           onError={(e) => {
@@ -344,21 +344,21 @@ export function ExpensesVisual() {
             name="Amazon Web Services"
             due="Due 12th May"
             amount="$50"
-            logoSrc="/public/aws.png"
+            logoSrc="/aws.png"
             logoBg="#232F3E"
           />
           <VendorRow
             name="Google Workspace"
             due="Due 18th May"
             amount="$18"
-            logoSrc="/public/google.png"
+            logoSrc="/google.png"
             logoBg="#FFFFFF"
           />
           <VendorRow
             name="Mailchimp"
             due="Due 24th May"
             amount="$35"
-            logoSrc="/public/mailchimp.png"
+            logoSrc="/mailchimp.png"
             logoBg="#FFE01B"
           />
         </div>

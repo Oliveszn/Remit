@@ -7,7 +7,7 @@ export const myTestimonials: TestimonialData[] = [
     name: "Elizabeth Adiwu",
     role: "Manager ",
     company: "Xenial Bookings",
-    avatar: "/public/av06.webp",
+    avatar: "/av06.webp",
   },
   {
     quote:
@@ -15,7 +15,7 @@ export const myTestimonials: TestimonialData[] = [
     name: "Joel Esiebo",
     role: "COO",
     company: "MeBrandingYou",
-    avatar: "/public/av06.webp",
+    avatar: "/av06.webp",
   },
   {
     quote:
@@ -23,6 +23,6 @@ export const myTestimonials: TestimonialData[] = [
     name: "Bek Jang",
     role: "Founder",
     company: "PanAfrica Logistics",
-    avatar: "/public/av06.webp",
+    avatar: "/av06.webp",
   },
 ];
