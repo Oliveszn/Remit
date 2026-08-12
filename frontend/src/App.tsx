@@ -12,7 +12,7 @@ import ReferralPage from "./pages/ReferralPage";
 import UtilityCardPage from "./pages/UtilityCard";
 import BudgetExpensePage from "./pages/BudgetExpensePage";
 import PayrollPage from "./pages/PayrollPage";
-import { ScrollToTop } from "./components/common/SCrolltoTop";
+import { ScrollToTop } from "./components/common/Scrolltotop";
 
 function App() {
   const { pathname } = useLocation();
